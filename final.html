@@ -1,0 +1,343 @@
+<html>
+    <head><title>拉麵</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                rtl: true
+            });
+        });
+    </script>
+    <style>
+        *{
+            margin:0;
+            color:gray;
+            text-align:center;
+        }
+        /* top */
+        .top{
+             background-color: white;
+        }
+        .top .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:10px;
+        }
+        .top .logo{
+            /*border:1px solid red;*/
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .top .logo img{
+            width: 100px;
+            vertical-align: middle;
+        }
+        .top .top-nav{
+            /*border:1px solid red;*/
+            font-size: 25px;
+            font-weight: bold;       
+        }
+        .top .top-nav a{
+            text-decoration: none;
+        }
+        /* nav */
+        .nav {
+            background-color:#333;
+            display: flex;
+            justify-content: center;
+        }
+        .nav ul {
+            list-style-type: none;  
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #333; 
+        }
+        .nav li {
+            float: left; 
+        }
+        .nav li a {    
+            display: block;  
+            color: white;  
+            text-align: center;  
+            padding: 14px 16px;  
+            text-decoration: none;  
+        }
+        .nav li a:hover {
+            background-color: #111; 
+        }
+        /*下拉式選單*/
+        .dropdown:hover .dropdown-content {
+            display: block;   /*使用block呈現上下排列*/
+        }
+        li.dropdown:hover{
+            background-color: #333;  /*設定背景顏色*/
+        }
+        .dropdown-content {  /*設定下拉選單內容格式*/
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {/*設定下拉選單連結內容格式*/
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* slider */
+        .slider{
+            background-color: black;
+        }
+        /* banner*/
+        .banner{
+            background-image: linear-gradient(#ABDCFF,#0396FF);
+            padding:30px;
+        }
+        .banner h1{
+            padding: 20px;
+        }        
+        /*faculty*/
+        .faculty {
+            display: block;
+            justify-content: center;
+            background-color:white;
+            padding:40px;
+        }
+        .faculty h2 {
+            font-size: 25px;
+            color: rgb(50,51,52);
+            padding-bottom:40px;
+        }
+        .faculty .container {
+            /*border:1px solid red;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .faculty .ramen{
+            /*border:1px solid blue;*/
+            display:block;
+            text-decoration: none;
+        }
+        .faculty .ramen img{
+            height: 200px;
+            width: 200px;
+        }
+        .faculty .ramen h3{
+            color: White;
+            background-color: rgba(39,40,34,.500);
+            text-align: center;           
+        }
+        /*contact*/
+        .contact {
+            display: block;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 30px;                
+        }
+        .contact h2{
+            color: rgb(54, 82, 110);
+            font-size: 25px;
+        }
+        .contact .infos{
+            display:flex;
+            margin-top: 30px; 
+            justify-content: center;
+        }
+        .contact .infos .left{
+            display:block;
+            text-align: left;
+            margin-right: 30px;
+        }
+        .contact .infos .left b{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            text-decoration: bold;
+            color: Gray;
+            font-size: 18px;
+            line-height: 18px;
+        }
+        .contact .infos .left span{
+            display:block;
+            text-align: left;
+            margin-top: 10px;
+            color: rgba(39,40,34,0.5);
+            font-size: 16px;
+            padding-left: 27px;
+        }
+        .contact .infos .right{
+            height: 219px;
+        }
+        .contact .infos .right iframe{
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(39,40,34,0.50);
+
+        }
+        /*footer*/
+        .footer{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(25,26,30);
+            padding: 30px 0;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                  <img src="https://img.lovepik.com/free-png/20210926/lovepik-japanese-ramen-png-image_401372068_wh1200.png">
+                  拉麵
+                </div>
+                <div class="top-nav">
+                  <a href=>新竹拉麵推薦</a>
+                </div>
+              </div>
+        </div>
+        <div class="nav">   
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li  class="dropdown"><a href="#faculty">店家介紹</a>
+                    <div class="dropdown-content">
+                        <a href="#faculty">沖繩拉麵 六家</a>
+                        <a href="#faculty">涼太拉麵</a>
+                        <a href="#faculty">横浜家系拉麵</a>
+                        <a href="#faculty">神虎拉麵</a>
+                        <a href="#faculty">姥夥房</a>
+                    </div>                       
+                </li>
+                <li><a href="#about">相關資訊</a></li>
+            </ul>
+        </div>
+        <div class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                <li><img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/279462104_150904914096709_3439243356791055320_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=19ewyh5z4oUAX_sCoaW&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfA-oBbGzvo0kzbcoBN4wdSJ41HSQZQRysFK8eeS8nu1oA&oe=63B6B07B" /></li>
+                    <li><img src="https://imgcp.aacdn.jp/img-a/1720/auto/global-aaj-front/article/2017/12/5a3b7e564c3bc_5a3b7df3a6ccb_298332418.jpg" /></li>
+                    <li><img src="https://www.nippon.com/hk/ncommon/contents/japan-topics/694940/694940.jpg" /></li>
+                    <li><img src="https://storage.googleapis.com/www-cw-com-tw/article/202101/article-5ff76e12dff12.jpg" /></li>                
+                </ul>
+            </div>
+        </div>
+        <div class="faculty" id="faculty">
+            <h2>店家介紹</h2>
+            <div class="container">
+                <a class="ramen" href="">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMDQ1p217FU3f-hyZWyvD9sm0lmM8rhtsb22pZq=s680-w680-h510" />
+                    <h3>沖繩拉麵 六家</h3>
+                </a>
+                <a class="ramen" href="">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNMNO7LNWY5_Vx1Tk2pfDfd6n2vFnZq_Nv77Bi4=s680-w680-h510" />
+                    <h3>涼太拉麵</h3>
+                </a>
+                <a class="ramen" href="">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMj2KXNeq5gmnM1ALuglhkKO4UfZhF8xTA0ruIC=s680-w680-h510" />
+                    <h3>横浜家系拉麵</h3>
+                </a>    
+                <a class="ramen" href="">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipN8DL6U0V-OD3rNExQCwA2ouEJLlC2Pyk-EVtHQ=s680-w680-h510" />
+                    <h3>神虎拉麵</h3>
+                </a>
+                <a class="ramen" href="">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOyULtYXfKqGH5J3VNHv6Vw_lh7fHY79faXQHiF=s680-w680-h510" />
+                    <h3>姥夥房</h3>
+                </a>
+            </div>
+        </div>
+        <div class="contact" id="about">
+                <h2>相關資訊</h2>
+                <div class="infos">
+                    <div class="left">
+                        <b>沖繩拉麵 六家</b>
+                        <span>地址： 302新竹縣竹北市成功二街19號</span>
+                        <b> 營業時間<p> 
+                              <span>
+                              星期一：  11:00–14:30, 17:00–22:15<br>
+                              星期二：	11:00–14:30, 17:00–22:15<br>
+                              星期三：	休息<br>
+                              星期四：	11:00–14:30, 17:00–22:15<br>
+                              星期五：	11:00–14:30, 17:00–22:15<br>
+                              星期六：  11:00–15:15, 17:00–22:15<br>
+                              星期日：	11:00–15:15, 17:00–21:00<br></span>
+                        </b><hr>
+                        <b>涼太拉麵</b>
+                        <span>地址： 地址： 302新竹縣竹北市成功十二街26號</span>
+                        <b> 營業時間<p> 
+                              <span>
+                              星期一：	17:30–21:00<br>
+                              星期二：	17:30–21:00<br>
+                              星期三：	17:30–21:00<br>
+                              星期四：	17:30–21:00<br>
+                              星期五：	11:30–13:30, 17:30–21:00<br>
+                              星期六：	11:30–13:30, 17:30–21:00<br>
+                              星期日：	11:30–13:30, 17:30–21:00<br>
+                              
+                              </span>
+                        </b><hr>
+                        <b>横浜家系拉麵</b>
+                        <span>地址： 地址： 30043新竹市東區民生路119號</span>
+                        <b> 營業時間<p> 
+                             <span> 
+                              星期一：	11:00–21:30<br>
+                              星期二：	11:00–21:30
+                              星期三：	休息<br>
+                              星期四：	11:00–21:30<br>
+                              星期五：	11:00–21:30<br>
+                              星期六：	11:00–21:30<br>
+                              星期日：	11:00–21:30<br>
+                              
+                              <br></span>
+                        </b><hr>
+                        <b>神虎拉麵</b>
+                        <span>地址： 300新竹市北區北門街170號</span>
+                        <b> 營業時間<p> 
+                              <span>
+                              星期一	11:30–14:00, 17:00–22:00<br>
+                              星期二	休息
+                              星期三	休息<br>
+                              星期四	11:30–14:00, 17:00–22:00<br>
+                              星期五	11:30–14:00, 17:00–22:00<br>
+                              星期六	11:30–14:00, 17:00–22:00<br>
+                              星期日	11:30–14:00, 17:00–22:00<br>
+                              
+                              <br></span>
+                        </b><hr>
+                        <b>姥夥房</b>
+                        <span>地址： 302新竹縣竹北市自強五路188號</span>
+                        <b> 營業時間<p>
+                              <span>
+                              星期一	11:30–20:30<br>
+                              星期二	11:30–20:30<br>
+                              星期三	11:30–20:30<br>
+                              星期四	11:30–20:30<br>
+                              星期五	11:30–20:30<br>
+                              星期六	11:30–20:30<br>
+                              星期日	11:30–20:30<br></span>
+                              
+                        </b>
+                    </div>
+                    <div class="right">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14485.091581008304!2d121.0229224!3d24.8203395!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x91bc3ea8d7bc0b17!2z5rKW57mp5ouJ6bq1IOWFreWutg!5e0!3m2!1szh-TW!2stw!4v1672822357110!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><hr>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14485.940408317198!2d121.0214193!3d24.8130789!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x27069ef0f84b283f!2z44Op44O844Oh44Oz5ra85aSq!5e0!3m2!1szh-TW!2stw!4v1672822515062!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><hr>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14486.29310020535!2d120.9769588!3d24.8100615!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x34ecba118e6ae031!2z5qiq5rWc5a6257O744Op44O844Oh44Oz5ouJ6bq15a62!5e0!3m2!1szh-TW!2stw!4v1672822467200!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><hr>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14486.458281406614!2d120.9652527!3d24.8086482!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdb1426cd085a86f1!2z56We6JmO5ouJ6bq1!5e0!3m2!1szh-TW!2stw!4v1672822250143!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><hr>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14485.675155774281!2d121.0216732!3d24.815348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc1625eb46dd88dcf!2z5ael5aSl5oi_LeerueWMl-m5v-WgtOW6lw!5e0!3m2!1szh-TW!2stw!4v1672822415856!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    
+                        </div>
+                </div>
+        </div>
+        <div class="footer">
+            &copy;Copyright 20223 Department of Information Management, MUST. All rights reserved. 維護者 楊貽婷
+        </div>
+     </body>
+</html>
